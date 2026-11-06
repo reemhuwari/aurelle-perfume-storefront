@@ -1,0 +1,21 @@
+<section class="page">
+  <h1>{{ familyName() ?? 'العطور' }}</h1>
+  <p class="sub">{{ list().length }} {{ list().length === 1 ? 'عطر' : 'عطور' }}</p>
+  <div class="chips">
+    <a class="chip" [class.on]="!family()" routerLink="/perfumes">الكل</a>
+    @for (f of families(); track f.slug) {
+      <a class="chip" [class.on]="familyName() === f.name" routerLink="/perfumes" [queryParams]="{ family: f.slug }">{{ f.name }}</a>
+    }
+  </div>
+  <input placeholder="ابحث باسم العطر…" (input)="q.set($any($event.target).value)" />
+  <div class="grid">
+    @for (p of list(); track p.id) {
+      <app-perfume-card [p]="p" />
+    } @empty {
+      <div class="empty-state">
+        <p class="sub">{{ familyName() ? 'لا توجد عطور متاحة في هذه المجموعة حالياً' : 'لا توجد نتائج مطابقة.' }}</p>
+        <a class="cta" routerLink="/perfumes">عرض كل العطور</a>
+      </div>
+    }
+  </div>
+</section>

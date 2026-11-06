@@ -1,0 +1,102 @@
+/* ───────── التنقّل ───────── */
+nav{transition:transform .5s cubic-bezier(.2,.8,.2,1),background .4s;
+  &.hide{transform:translateY(-100%)}
+  &.solid{background:rgba(18,6,10,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}}
+.burger{display:none;width:40px;height:40px;position:relative;i{position:absolute;inset-inline:10px;height:1.5px;background:var(--pearl);transition:.3s;&:first-child{top:16px}&:last-child{top:23px}}
+  &.on i:first-child{top:20px;transform:rotate(45deg)}&.on i:last-child{top:20px;transform:rotate(-45deg)}}
+.mobile-menu{position:fixed;inset:0;z-index:40;background:rgba(18,6,10,.96);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;font-family:var(--serif);font-size:40px;animation:fadeIn .3s both}
+@media(max-width:860px){.burger{display:block}.hide-sm{display:none}}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes fadeOut{to{opacity:0}}
+::view-transition-old(root){animation:.25s ease both fadeOut}
+::view-transition-new(root){animation:.4s ease both fadeIn}
+
+/* ───────── عناصر مشتركة ───────── */
+.eyebrow{display:inline-block;letter-spacing:.18em;font-size:13px;color:var(--brass);margin-bottom:14px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:10px}
+.link{opacity:.75;transition:.3s;&:hover{opacity:1;color:var(--petal)}}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.12em .02em .2em;margin:-.12em 0 -.2em}
+.wi{display:inline-block;will-change:transform}
+.spot{position:relative;&::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(234,166,184,.22),transparent 65%)}&:hover::before{opacity:1}}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;direction:ltr;
+  .track{display:flex;width:max-content;animation:marq 45s linear infinite;span{direction:rtl;font-family:var(--serif);font-size:clamp(26px,4vw,52px);white-space:nowrap;padding-inline:24px;opacity:.85}}}
+@keyframes marq{to{transform:translateX(-50%)}}
+.fam{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:30px}
+.fam-card{position:relative;overflow:hidden;aspect-ratio:3/4;border-radius:200px 200px 18px 18px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:28px;border:1px solid rgba(255,255,255,.14);
+  background:linear-gradient(180deg,rgba(13,6,11,.12),rgba(10,4,8,.8)),var(--family-image);background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 74%,#fff),0 24px 52px rgba(0,0,0,.34);transition:transform .5s,border-color .5s,box-shadow .5s;
+  &::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 40%,rgba(0,0,0,.20) 100%),radial-gradient(140% 60% at 50% 18%,color-mix(in srgb,var(--c) 38%,transparent),transparent 55%);mix-blend-mode:screen}
+  span,h3{position:relative;z-index:1}
+  h3{font-size:30px;line-height:1.1;text-shadow:0 10px 28px rgba(0,0,0,.6)}span{font-size:13px;opacity:.8;text-shadow:0 8px 20px rgba(0,0,0,.6)}
+  &:hover{transform:translateY(-8px);border-color:var(--brass);box-shadow:inset 0 0 0 1px rgba(246,216,161,.8),0 30px 70px rgba(0,0,0,.46)}}
+.cta-band{text-align:center;display:grid;justify-items:center;gap:14px;.cta{margin-top:10px}}
+@media(max-width:860px){.fam{grid-template-columns:repeat(2,1fr)}}
+
+/* ───────── قصة الزجاجة (2D) ───────── */
+.story{position:relative;height:520vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;
+  --bw:clamp(130px,15.5vw,235px);
+  background:#1b0a12}
+.floral-backdrop{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;background:#24111a}
+.floral-photo{position:absolute;display:block;width:100%;height:100%;object-fit:cover}
+.roses-main{inset:0;object-position:center 48%;opacity:.94}
+.roses-mauve{inset-block:-12%;inset-inline-end:-6%;width:58%;height:124%;object-position:center;
+  opacity:.86;mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 100%)}
+.rose-closeup{inset-block:20% 5%;inset-inline-start:15%;width:34%;height:65%;object-position:center;
+  opacity:.68;mix-blend-mode:screen;mask-image:linear-gradient(90deg,transparent 0%,#000 24%,#000 78%,transparent 100%)}
+.cherry-blossoms{inset-block:-10% auto;inset-inline-start:-8%;width:46%;height:68%;object-position:center 42%;
+  opacity:.72;mix-blend-mode:screen;mask-image:linear-gradient(90deg,#000 0%,#000 58%,transparent 100%)}
+.floral-shade{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(18,6,10,.12) 18%,rgba(18,6,10,.28) 48%,rgba(18,6,10,.62) 100%),
+    linear-gradient(180deg,rgba(18,6,10,.2),transparent 28%,transparent 66%,rgba(18,6,10,.45))}
+
+/* أماكن النصوص: الـ slot يوسّط عمودياً، والعنصر الداخلي هو الذي تحرّكه GSAP */
+.slot{position:absolute;inset-block:0;display:flex;align-items:center;z-index:3}
+.slot-hero{inset-inline-start:5vw;width:46%}
+.slot-ch{inset-inline-start:7vw;width:min(28vw,380px);&.alt{inset-inline-start:auto;inset-inline-end:7vw}}
+.hero-copy{will-change:transform,opacity;
+  p{max-width:420px;opacity:.8;margin:16px 0 28px;font-size:17px}
+  .hero-cta{display:flex;gap:10px;flex-wrap:wrap}}
+.ch{opacity:0;will-change:transform,opacity;
+  b{font-family:var(--serif);font-size:clamp(48px,6vw,84px);line-height:1;color:var(--petal);display:block}
+  h2{margin:6px 0 8px}p{opacity:.8}}
+/* الزجاجة */
+.bottle-wrap{position:absolute;inset:0;margin:auto;width:var(--bw);height:calc(var(--bw) * 1067 / 540);z-index:2;will-change:transform}
+.bottle-float,.bottle-in{position:relative;width:100%;height:100%}
+.bottle-float{will-change:transform}
+.hero-svg{display:block;width:100%;height:100%}
+.bottle-art,.bottle-img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 30px 38px rgba(0,0,0,.5))}
+.bottle-shadow{position:absolute;left:-6%;right:-6%;bottom:-6%;height:8%;
+  i{display:block;height:100%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(0,0,0,.6),transparent 70%);filter:blur(6px)}}
+
+.progress{position:absolute;inset-inline-end:2.2vw;top:50%;height:28vh;width:2px;margin-top:-14vh;background:var(--line);z-index:3;
+  i{display:block;height:100%;background:linear-gradient(var(--petal),var(--brass));transform:scaleY(0);transform-origin:top}}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;font-size:12px;opacity:.6;display:flex;flex-direction:column;align-items:center;gap:8px;
+  i{width:1px;height:38px;background:linear-gradient(var(--pearl),transparent);animation:hint 2.2s ease-in-out infinite;transform-origin:top}}
+@keyframes hint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* تابلت/جوال: الزجاجة بالأعلى، والنصوص أسفلها */
+@media(max-width:860px){
+  .stage{--bw:clamp(110px,36vw,170px)}
+  .roses-main{object-position:center 43%}
+  .roses-mauve{inset-block:-5% auto;inset-inline-end:-28%;width:96%;height:67%;opacity:.82}
+  .rose-closeup{inset-block:25% auto;inset-inline-start:25%;width:70%;height:55%;opacity:.46}
+  .cherry-blossoms{inset-block:16% auto;inset-inline-start:-28%;width:78%;height:60%;opacity:.58}
+  .floral-shade{background:linear-gradient(180deg,rgba(18,6,10,.12) 0%,rgba(18,6,10,.1) 35%,rgba(18,6,10,.88) 65%,rgba(18,6,10,.96) 100%)}
+  .bottle-wrap{bottom:38%}
+  .slot{inset-inline:6vw;width:auto;align-items:flex-end;padding-bottom:9vh}
+  .slot-hero,.slot-ch,.slot-ch.alt{inset-inline:6vw;width:auto}
+  .hero-copy h1{font-size:clamp(34px,10vw,52px)}
+  .hero-copy p{font-size:15px;margin:10px 0 18px}
+  .progress{display:none}
+}
+
+/* حركة أقل: كل شيء ثابت ومقروء بدون Pinning */
+@media(prefers-reduced-motion:reduce){
+  .story{height:auto}
+  .stage{position:relative;height:auto;display:grid;gap:36px;justify-items:center;padding:110px 6vw 60px}
+  .slot,.slot-hero,.slot-ch,.slot-ch.alt{position:relative;inset:auto;width:100%;max-width:560px;padding:0}
+  .bottle-wrap{position:relative;inset:auto;margin:0 auto;order:-1}
+  .ch{opacity:1}
+  .progress,.scroll-hint{display:none}
+}

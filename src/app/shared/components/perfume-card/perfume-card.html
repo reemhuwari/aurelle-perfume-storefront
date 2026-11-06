@@ -1,0 +1,16 @@
+<a class="card" [routerLink]="['/perfumes', p().slug]">
+  <div class="shelf" appSpotlight [style.background]="'linear-gradient(160deg,' + p().color + '66,#12060a 75%)'">
+    @if (isPhoto()) {
+      <!-- طبقة خلفية ضبابية تملأ الإطار + الصورة الحقيقية كاملة بدون قص -->
+      <img class="photo-bg" [src]="p().image" alt="" aria-hidden="true" loading="lazy" />
+      <img class="photo" [src]="p().image" [alt]="p().name" loading="lazy" />
+    } @else if (p().image) {
+      <img [src]="p().image" [alt]="p().name" loading="lazy" />
+    } @else {
+      <div class="art"><app-bottle-art [color]="p().color" [variant]="p().id" /></div>
+    }
+    <button class="heart" [class.on]="fav.has(p().id)" (click)="toggle($event)" aria-label="إضافة للمفضلة">♥</button>
+  </div>
+  <h3>{{ p().name }}</h3>
+  <div class="m"><span>{{ p().family }}</span><span>من {{ p().sizes[0].price }} د.أ</span></div>
+</a>

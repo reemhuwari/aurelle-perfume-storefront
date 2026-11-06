@@ -1,0 +1,17 @@
+<section class="page auth-page">
+  <form class="authbox" (ngSubmit)="submit()">
+    <div class="auth-header">
+      <h1>أهلاً بعودتك</h1>
+      <p class="sub">سجّل دخولك لحفظ عطورك المفضلة. (تجريبي: demo&#64;aurelle.com / 123456)</p>
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" name="email" type="email" [(ngModel)]="email" placeholder="البريد الإلكتروني" autocomplete="email" />
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" name="password" type="password" [(ngModel)]="password" placeholder="كلمة المرور" autocomplete="current-password" />
+    </div>
+    <div class="err">{{ error() }}</div>
+    <button class="cta" type="submit" [disabled]="busy()">تسجيل الدخول</button>
+    <p class="sw">ليس لديك حساب؟ <a routerLink="/register" [queryParams]="{ returnUrl: returnUrl() }">أنشئ حساباً</a></p>
+  </form>
+</section>

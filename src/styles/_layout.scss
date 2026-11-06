@@ -1,0 +1,26 @@
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;background:linear-gradient(var(--ink),transparent);backdrop-filter:blur(6px)}
+.logo{font-family:var(--serif);font-size:30px;small{color:var(--brass);font-style:italic;margin-inline-start:8px;font-size:15px}}
+.links,.acts{display:flex;gap:26px;align-items:center}
+.links a{opacity:.75;transition:.3s;&:hover,&.act{opacity:1;color:var(--petal)}}
+.page{padding:120px 5vw 80px;min-height:80vh}
+section.block{padding:90px 5vw}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 5vw 30px;background:radial-gradient(60% 70% at 30% 50%,var(--wine),var(--oxblood) 45%,var(--ink));
+  p{max-width:420px;opacity:.8;margin:16px 0 28px;font-size:17px}}
+.hero-3d{height:80vh;min-height:420px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;margin:30px 0}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center}
+.d3{height:72vh;min-height:400px}
+.auth-page{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 170px);padding:90px 5vw 30px}
+.authbox{width:min(100%,430px);margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.authbox .auth-header{display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+.authbox h1{font-size:clamp(32px,4vw,54px);margin:0;line-height:1.15}
+.authbox .sub{max-width:100%;margin:0;opacity:.78}
+.authbox .auth-field{display:flex;flex-direction:column;gap:8px}
+.authbox input{width:100%;min-height:58px;border-radius:14px;padding:16px 18px;margin:0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;color:var(--pearl);font:inherit;
+  &::placeholder{color:rgba(240,236,234,.62)}
+  &:focus{border-color:var(--petal);box-shadow:0 0 0 3px rgba(233,177,212,.18);background:rgba(255,255,255,.06)}}
+.authbox .err{min-height:1.3em;color:var(--rose);font-size:.9rem;line-height:1.5}
+.authbox .cta{width:100%;justify-content:center;margin-top:8px}
+.authbox .sw{margin:2px 0 0;text-align:center;opacity:.8}
+footer{padding:40px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:14px;opacity:.7}
+@media(max-width:860px){.links{display:none}.hero,.detail{grid-template-columns:1fr}.hero{padding-top:90px}.hero-3d,.d3{height:50vh}.auth-page{min-height:auto;padding-top:120px;padding-bottom:60px}}

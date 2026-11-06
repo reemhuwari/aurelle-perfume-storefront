@@ -1,0 +1,2452 @@
+{
+  "perfumes": [
+    {
+      "id": 1,
+      "slug": "rose-royale",
+      "name": "روز رويال",
+      "family": "ورديّة",
+      "color": "#d9567c",
+      "top": [
+        "ورد دمشقي",
+        "فلفل وردي"
+      ],
+      "heart": [
+        "بيوني",
+        "عود خفيف"
+      ],
+      "base": [
+        "مسك أبيض",
+        "عنبر"
+      ],
+      "longevity": 90,
+      "sillage": 75,
+      "season": "مسائي",
+      "description": "وردة بتلات مخملية تفتح بهدوء ثم تستقر على دفء العنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 120
+        },
+        {
+          "ml": 50,
+          "price": 185
+        },
+        {
+          "ml": 100,
+          "price": 320
+        }
+      ],
+      "image": "images/art/rose-royale.webp"
+    },
+    {
+      "id": 2,
+      "slug": "oud-al-layl",
+      "name": "عود الليل",
+      "family": "عودية",
+      "color": "#8a4a1f",
+      "top": [
+        "زعفران",
+        "هيل"
+      ],
+      "heart": [
+        "عود كمبودي",
+        "ورد طائفي"
+      ],
+      "base": [
+        "صندل",
+        "باتشولي"
+      ],
+      "longevity": 95,
+      "sillage": 85,
+      "season": "شتوي",
+      "description": "عود داكن مدخّن، مصنوع لليالي الشتاء الطويلة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 150
+        },
+        {
+          "ml": 50,
+          "price": 240
+        },
+        {
+          "ml": 100,
+          "price": 420
+        }
+      ],
+      "image": "images/art/oud-al-layl.jpg"
+    },
+    {
+      "id": 3,
+      "slug": "fajr-lemon",
+      "name": "فجر الليمون",
+      "family": "حمضية",
+      "color": "#e3cf3a",
+      "top": [
+        "ليمون صقلي",
+        "برغموت"
+      ],
+      "heart": [
+        "نيرولي",
+        "زهر البرتقال"
+      ],
+      "base": [
+        "مسك خفيف",
+        "أرز"
+      ],
+      "longevity": 55,
+      "sillage": 50,
+      "season": "صيفي",
+      "description": "انتعاش نظيف للنهار، يناسب العمل والمشاوير.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 6
+        },
+        {
+          "ml": 30,
+          "price": 80
+        },
+        {
+          "ml": 50,
+          "price": 130
+        },
+        {
+          "ml": 100,
+          "price": 220
+        }
+      ],
+      "image": "images/art/fajr-lemon.jpg"
+    },
+    {
+      "id": 4,
+      "slug": "silk-musk",
+      "name": "مسك الحرير",
+      "family": "ورديّة",
+      "color": "#e8b4bc",
+      "top": [
+        "كمثرى",
+        "ياسمين"
+      ],
+      "heart": [
+        "مسك",
+        "زنبق"
+      ],
+      "base": [
+        "خشب أبيض",
+        "فانيلا"
+      ],
+      "longevity": 70,
+      "sillage": 55,
+      "season": "طوال العام",
+      "description": "قريب من البشرة، ناعم كقماش الحرير.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 95
+        },
+        {
+          "ml": 50,
+          "price": 150
+        },
+        {
+          "ml": 100,
+          "price": 260
+        }
+      ],
+      "image": "images/art/silk-musk.jpg"
+    },
+    {
+      "id": 5,
+      "slug": "saffron-night",
+      "name": "ليلة الزعفران",
+      "family": "شرقية",
+      "color": "#d1651f",
+      "top": [
+        "زعفران",
+        "قرفة"
+      ],
+      "heart": [
+        "ورد",
+        "جلد"
+      ],
+      "base": [
+        "عنبر",
+        "لبان"
+      ],
+      "longevity": 90,
+      "sillage": 80,
+      "season": "خريفي",
+      "description": "شرقي غني بالتوابل، يترك أثراً يُذكَر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 9
+        },
+        {
+          "ml": 30,
+          "price": 130
+        },
+        {
+          "ml": 50,
+          "price": 210
+        },
+        {
+          "ml": 100,
+          "price": 360
+        }
+      ],
+      "image": "images/art/saffron-night.jpg"
+    },
+    {
+      "id": 6,
+      "slug": "morning-fig",
+      "name": "تين الصباح",
+      "family": "حمضية",
+      "color": "#7da35a",
+      "top": [
+        "أوراق التين",
+        "جريب فروت"
+      ],
+      "heart": [
+        "حليب جوز الهند"
+      ],
+      "base": [
+        "خشب الأرز"
+      ],
+      "longevity": 60,
+      "sillage": 50,
+      "season": "ربيعي",
+      "description": "أخضر كريمي برائحة بستان عند الفجر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 6
+        },
+        {
+          "ml": 30,
+          "price": 85
+        },
+        {
+          "ml": 50,
+          "price": 140
+        },
+        {
+          "ml": 100,
+          "price": 240
+        }
+      ],
+      "image": "images/art/morning-fig.jpg"
+    },
+    {
+      "id": 7,
+      "slug": "black-vanilla",
+      "name": "فانيلا سوداء",
+      "family": "شرقية",
+      "color": "#5a1a30",
+      "top": [
+        "كاكاو",
+        "فلفل أسود"
+      ],
+      "heart": [
+        "فانيلا مدخنة"
+      ],
+      "base": [
+        "تونكا",
+        "عنبر"
+      ],
+      "longevity": 85,
+      "sillage": 70,
+      "season": "شتوي",
+      "description": "حلاوة داكنة غير سكّرية، للمسائيات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 105
+        },
+        {
+          "ml": 50,
+          "price": 170
+        },
+        {
+          "ml": 100,
+          "price": 290
+        }
+      ],
+      "image": "images/art/black-vanilla.png"
+    },
+    {
+      "id": 8,
+      "slug": "taif-rose",
+      "name": "ورد الطائف",
+      "family": "عودية",
+      "color": "#a8344f",
+      "top": [
+        "ورد طائفي"
+      ],
+      "heart": [
+        "عود",
+        "لبان"
+      ],
+      "base": [
+        "مسك",
+        "خشب"
+      ],
+      "longevity": 92,
+      "sillage": 88,
+      "season": "مناسبات",
+      "description": "وردة الجزيرة الأصيلة فوق عود عتيق.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 11
+        },
+        {
+          "ml": 30,
+          "price": 160
+        },
+        {
+          "ml": 50,
+          "price": 260
+        },
+        {
+          "ml": 100,
+          "price": 450
+        }
+      ],
+      "image": "images/art/taif-rose.png"
+    },
+    {
+      "id": 9,
+      "slug": "damask-night",
+      "name": "ليلة الدمشقي",
+      "family": "ورديّة",
+      "color": "#cd4965",
+      "top": [
+        "ورد دمشقي",
+        "ليتشي"
+      ],
+      "heart": [
+        "بيوني",
+        "زنبق"
+      ],
+      "base": [
+        "مسك أبيض",
+        "فانيليا"
+      ],
+      "longevity": 88,
+      "sillage": 67,
+      "season": "ربيعي",
+      "description": "بتلات رطبة وظلال مسك، أنوثة هادئة بلا مبالغة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 188
+        },
+        {
+          "ml": 50,
+          "price": 290
+        },
+        {
+          "ml": 100,
+          "price": 508
+        }
+      ],
+      "image": "images/art/damask-night.jpg"
+    },
+    {
+      "id": 10,
+      "slug": "dawn-petals",
+      "name": "بتلات الفجر",
+      "family": "ورديّة",
+      "color": "#b43353",
+      "top": [
+        "فلفل وردي",
+        "رمان"
+      ],
+      "heart": [
+        "ياسمين",
+        "جوري"
+      ],
+      "base": [
+        "عنبر",
+        "خشب أبيض"
+      ],
+      "longevity": 85,
+      "sillage": 72,
+      "season": "ربيعي",
+      "description": "وردة ناعمة تتفتّح ببطء وتبقى قريبة من البشرة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 136
+        },
+        {
+          "ml": 50,
+          "price": 210
+        },
+        {
+          "ml": 100,
+          "price": 368
+        }
+      ],
+      "image": "images/art/dawn-petals.jpg"
+    },
+    {
+      "id": 11,
+      "slug": "ruby-rose",
+      "name": "وردة الياقوت",
+      "family": "ورديّة",
+      "color": "#bd294d",
+      "top": [
+        "ليتشي",
+        "ورد دمشقي"
+      ],
+      "heart": [
+        "زنبق",
+        "بيوني"
+      ],
+      "base": [
+        "فانيليا",
+        "مسك أبيض"
+      ],
+      "longevity": 65,
+      "sillage": 85,
+      "season": "ربيعي",
+      "description": "بتلات رطبة وظلال مسك، أنوثة هادئة بلا مبالغة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 65
+        },
+        {
+          "ml": 50,
+          "price": 100
+        },
+        {
+          "ml": 100,
+          "price": 175
+        }
+      ],
+      "image": "images/art/ruby-rose.jpg"
+    },
+    {
+      "id": 12,
+      "slug": "jouri-gardens",
+      "name": "حدائق الجوري",
+      "family": "ورديّة",
+      "color": "#ba304f",
+      "top": [
+        "رمان",
+        "فلفل وردي"
+      ],
+      "heart": [
+        "جوري",
+        "ياسمين"
+      ],
+      "base": [
+        "خشب أبيض",
+        "عنبر"
+      ],
+      "longevity": 58,
+      "sillage": 72,
+      "season": "ربيعي",
+      "description": "بتلات رطبة وظلال مسك، أنوثة هادئة بلا مبالغة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 188
+        },
+        {
+          "ml": 50,
+          "price": 290
+        },
+        {
+          "ml": 100,
+          "price": 508
+        }
+      ],
+      "image": "images/art/jouri-gardens.png"
+    },
+    {
+      "id": 13,
+      "slug": "rose-whisper",
+      "name": "همسة الورد",
+      "family": "ورديّة",
+      "color": "#ae2a5e",
+      "top": [
+        "ورد دمشقي",
+        "ليتشي"
+      ],
+      "heart": [
+        "بيوني",
+        "زنبق"
+      ],
+      "base": [
+        "مسك أبيض",
+        "فانيليا"
+      ],
+      "longevity": 73,
+      "sillage": 49,
+      "season": "طوال العام",
+      "description": "بتلات رطبة وظلال مسك، أنوثة هادئة بلا مبالغة.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 75
+        },
+        {
+          "ml": 50,
+          "price": 115
+        },
+        {
+          "ml": 100,
+          "price": 201
+        }
+      ],
+      "image": "images/art/rose-whisper.jpg"
+    },
+    {
+      "id": 14,
+      "slug": "evening-bloom",
+      "name": "ورد المساء",
+      "family": "ورديّة",
+      "color": "#cc3857",
+      "top": [
+        "فلفل وردي",
+        "رمان"
+      ],
+      "heart": [
+        "ياسمين",
+        "جوري"
+      ],
+      "base": [
+        "عنبر",
+        "خشب أبيض"
+      ],
+      "longevity": 83,
+      "sillage": 45,
+      "season": "مسائي",
+      "description": "ورد غني بلمسة فاكهية تلفت الانتباه بلطف.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 107
+        },
+        {
+          "ml": 50,
+          "price": 165
+        },
+        {
+          "ml": 100,
+          "price": 289
+        }
+      ],
+      "image": "images/art/evening-bloom.png"
+    },
+    {
+      "id": 15,
+      "slug": "royal-oud",
+      "name": "عود الملوك",
+      "family": "عودية",
+      "color": "#cc8b4a",
+      "top": [
+        "فلفل أسود",
+        "زعفران"
+      ],
+      "heart": [
+        "لبان",
+        "عود كمبودي"
+      ],
+      "base": [
+        "عنبر",
+        "صندل"
+      ],
+      "longevity": 77,
+      "sillage": 65,
+      "season": "شتوي",
+      "description": "عود عميق ودافئ بحضور واثق، مناسب للأمسيات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 11
+        },
+        {
+          "ml": 30,
+          "price": 159
+        },
+        {
+          "ml": 50,
+          "price": 245
+        },
+        {
+          "ml": 100,
+          "price": 429
+        }
+      ],
+      "image": "images/art/royal-oud.jpg"
+    },
+    {
+      "id": 16,
+      "slug": "oud-smoke",
+      "name": "دخان العود",
+      "family": "عودية",
+      "color": "#c86831",
+      "top": [
+        "بخور",
+        "هيل"
+      ],
+      "heart": [
+        "جلد",
+        "ورد طائفي"
+      ],
+      "base": [
+        "مسك",
+        "باتشولي"
+      ],
+      "longevity": 84,
+      "sillage": 70,
+      "season": "مناسبات",
+      "description": "عود مصقول تلطّفه الزهور والتوابل.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 107
+        },
+        {
+          "ml": 50,
+          "price": 165
+        },
+        {
+          "ml": 100,
+          "price": 289
+        }
+      ],
+      "image": "images/art/oud-smoke.jpg"
+    },
+    {
+      "id": 17,
+      "slug": "desert-oud",
+      "name": "عود الصحراء",
+      "family": "عودية",
+      "color": "#ba6734",
+      "top": [
+        "زعفران",
+        "فلفل أسود"
+      ],
+      "heart": [
+        "عود كمبودي",
+        "لبان"
+      ],
+      "base": [
+        "صندل",
+        "عنبر"
+      ],
+      "longevity": 74,
+      "sillage": 60,
+      "season": "شتوي",
+      "description": "دخان خفيف وعود عتيق يترك أثراً طويلاً.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 143
+        },
+        {
+          "ml": 50,
+          "price": 220
+        },
+        {
+          "ml": 100,
+          "price": 385
+        }
+      ],
+      "image": "images/art/desert-oud.jpg"
+    },
+    {
+      "id": 18,
+      "slug": "amber-oud",
+      "name": "عنبر وعود",
+      "family": "عودية",
+      "color": "#d17a3f",
+      "top": [
+        "هيل",
+        "بخور"
+      ],
+      "heart": [
+        "ورد طائفي",
+        "جلد"
+      ],
+      "base": [
+        "باتشولي",
+        "مسك"
+      ],
+      "longevity": 90,
+      "sillage": 90,
+      "season": "مناسبات",
+      "description": "عود عميق ودافئ بحضور واثق، مناسب للأمسيات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 146
+        },
+        {
+          "ml": 50,
+          "price": 225
+        },
+        {
+          "ml": 100,
+          "price": 394
+        }
+      ],
+      "image": "images/art/amber-oud.png"
+    },
+    {
+      "id": 19,
+      "slug": "cloud-oud",
+      "name": "عود الغيم",
+      "family": "عودية",
+      "color": "#c98046",
+      "top": [
+        "فلفل أسود",
+        "زعفران"
+      ],
+      "heart": [
+        "لبان",
+        "عود كمبودي"
+      ],
+      "base": [
+        "عنبر",
+        "صندل"
+      ],
+      "longevity": 77,
+      "sillage": 90,
+      "season": "شتوي",
+      "description": "عود مصقول تلطّفه الزهور والتوابل.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 185
+        },
+        {
+          "ml": 50,
+          "price": 285
+        },
+        {
+          "ml": 100,
+          "price": 499
+        }
+      ],
+      "image": "images/art/cloud-oud.jpg"
+    },
+    {
+      "id": 20,
+      "slug": "white-oud",
+      "name": "العود الأبيض",
+      "family": "عودية",
+      "color": "#c97848",
+      "top": [
+        "بخور",
+        "هيل"
+      ],
+      "heart": [
+        "جلد",
+        "ورد طائفي"
+      ],
+      "base": [
+        "مسك",
+        "باتشولي"
+      ],
+      "longevity": 73,
+      "sillage": 86,
+      "season": "خريفي",
+      "description": "عود عميق ودافئ بحضور واثق، مناسب للأمسيات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 98
+        },
+        {
+          "ml": 50,
+          "price": 150
+        },
+        {
+          "ml": 100,
+          "price": 262
+        }
+      ],
+      "image": "images/art/white-oud.webp"
+    },
+    {
+      "id": 21,
+      "slug": "morning-orange",
+      "name": "برتقال الصباح",
+      "family": "حمضية",
+      "color": "#cfd325",
+      "top": [
+        "ليمون صقلي",
+        "يوسفي"
+      ],
+      "heart": [
+        "نيرولي",
+        "شاي أخضر"
+      ],
+      "base": [
+        "مسك خفيف",
+        "خشب أبيض"
+      ],
+      "longevity": 64,
+      "sillage": 56,
+      "season": "صيفي",
+      "description": "حمضيات لامعة وأخضر منعش، خفيف على الجو الحار.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 110
+        },
+        {
+          "ml": 50,
+          "price": 170
+        },
+        {
+          "ml": 100,
+          "price": 298
+        }
+      ],
+      "image": "images/art/morning-orange.jpg"
+    },
+    {
+      "id": 22,
+      "slug": "sun-bergamot",
+      "name": "برغموت الشمس",
+      "family": "حمضية",
+      "color": "#c7d22e",
+      "top": [
+        "برغموت",
+        "جريب فروت"
+      ],
+      "heart": [
+        "زهر البرتقال",
+        "نعناع"
+      ],
+      "base": [
+        "أرز",
+        "ريحان"
+      ],
+      "longevity": 93,
+      "sillage": 54,
+      "season": "ربيعي",
+      "description": "انتعاش مشرق للنهار يبدأ حيوياً وينتهي نظيفاً.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 9
+        },
+        {
+          "ml": 30,
+          "price": 133
+        },
+        {
+          "ml": 50,
+          "price": 205
+        },
+        {
+          "ml": 100,
+          "price": 359
+        }
+      ],
+      "image": "images/art/sun-bergamot.jpg"
+    },
+    {
+      "id": 23,
+      "slug": "harbor-lemon",
+      "name": "ليمون الميناء",
+      "family": "حمضية",
+      "color": "#bfc62a",
+      "top": [
+        "يوسفي",
+        "ليمون صقلي"
+      ],
+      "heart": [
+        "شاي أخضر",
+        "نيرولي"
+      ],
+      "base": [
+        "خشب أبيض",
+        "مسك خفيف"
+      ],
+      "longevity": 80,
+      "sillage": 59,
+      "season": "طوال العام",
+      "description": "حمضيات لامعة وأخضر منعش، خفيف على الجو الحار.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 9
+        },
+        {
+          "ml": 30,
+          "price": 124
+        },
+        {
+          "ml": 50,
+          "price": 190
+        },
+        {
+          "ml": 100,
+          "price": 332
+        }
+      ],
+      "image": "images/art/harbor-lemon.png"
+    },
+    {
+      "id": 24,
+      "slug": "winter-mandarin",
+      "name": "يوسفي الشتاء",
+      "family": "حمضية",
+      "color": "#abc11b",
+      "top": [
+        "جريب فروت",
+        "برغموت"
+      ],
+      "heart": [
+        "نعناع",
+        "زهر البرتقال"
+      ],
+      "base": [
+        "ريحان",
+        "أرز"
+      ],
+      "longevity": 77,
+      "sillage": 55,
+      "season": "ربيعي",
+      "description": "فتح مضيء وقاعدة ناعمة تناسب الاستخدام اليومي.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 6
+        },
+        {
+          "ml": 30,
+          "price": 81
+        },
+        {
+          "ml": 50,
+          "price": 125
+        },
+        {
+          "ml": 100,
+          "price": 219
+        }
+      ],
+      "image": "images/art/sun-bergamot.jpg"
+    },
+    {
+      "id": 25,
+      "slug": "pink-grapefruit",
+      "name": "جريب فروت",
+      "family": "حمضية",
+      "color": "#e5c22a",
+      "top": [
+        "ليمون صقلي",
+        "يوسفي"
+      ],
+      "heart": [
+        "نيرولي",
+        "شاي أخضر"
+      ],
+      "base": [
+        "مسك خفيف",
+        "خشب أبيض"
+      ],
+      "longevity": 76,
+      "sillage": 84,
+      "season": "طوال العام",
+      "description": "انتعاش مشرق للنهار يبدأ حيوياً وينتهي نظيفاً.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 146
+        },
+        {
+          "ml": 50,
+          "price": 225
+        },
+        {
+          "ml": 100,
+          "price": 394
+        }
+      ],
+      "image": "images/art/pink-grapefruit.webp"
+    },
+    {
+      "id": 26,
+      "slug": "citrus-breeze",
+      "name": "نسيم الحمضيات",
+      "family": "حمضية",
+      "color": "#e0cb3d",
+      "top": [
+        "برغموت",
+        "جريب فروت"
+      ],
+      "heart": [
+        "زهر البرتقال",
+        "نعناع"
+      ],
+      "base": [
+        "أرز",
+        "ريحان"
+      ],
+      "longevity": 80,
+      "sillage": 58,
+      "season": "طوال العام",
+      "description": "انتعاش مشرق للنهار يبدأ حيوياً وينتهي نظيفاً.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 110
+        },
+        {
+          "ml": 50,
+          "price": 170
+        },
+        {
+          "ml": 100,
+          "price": 298
+        }
+      ],
+      "image": "images/art/citrus-breeze.jpg"
+    },
+    {
+      "id": 27,
+      "slug": "royal-saffron",
+      "name": "زعفران ملكي",
+      "family": "شرقية",
+      "color": "#da6626",
+      "top": [
+        "هيل",
+        "قرفة"
+      ],
+      "heart": [
+        "عسل",
+        "ورد"
+      ],
+      "base": [
+        "فانيليا",
+        "عنبر"
+      ],
+      "longevity": 81,
+      "sillage": 84,
+      "season": "مسائي",
+      "description": "عنبر ولبان وحلاوة ناعمة لأمسيات الشتاء.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 75
+        },
+        {
+          "ml": 50,
+          "price": 115
+        },
+        {
+          "ml": 100,
+          "price": 201
+        }
+      ],
+      "image": "images/art/saffron-night.jpg"
+    },
+    {
+      "id": 28,
+      "slug": "damascus-nights",
+      "name": "ليالي دمشق",
+      "family": "شرقية",
+      "color": "#d54227",
+      "top": [
+        "برتقال مر",
+        "زعفران"
+      ],
+      "heart": [
+        "تمر",
+        "جلد"
+      ],
+      "base": [
+        "تونكا",
+        "لبان"
+      ],
+      "longevity": 75,
+      "sillage": 65,
+      "season": "شتوي",
+      "description": "شرقي غني بتفاصيل كثيرة يتكشّف مع الوقت.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 185
+        },
+        {
+          "ml": 50,
+          "price": 285
+        },
+        {
+          "ml": 100,
+          "price": 499
+        }
+      ],
+      "image": "images/art/damascus-nights.jpg"
+    },
+    {
+      "id": 29,
+      "slug": "orient-amber",
+      "name": "عنبر الشرق",
+      "family": "شرقية",
+      "color": "#e15d34",
+      "top": [
+        "قرفة",
+        "هيل"
+      ],
+      "heart": [
+        "ورد",
+        "عسل"
+      ],
+      "base": [
+        "عنبر",
+        "فانيليا"
+      ],
+      "longevity": 61,
+      "sillage": 87,
+      "season": "شتوي",
+      "description": "شرقي غني بتفاصيل كثيرة يتكشّف مع الوقت.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 12
+        },
+        {
+          "ml": 30,
+          "price": 166
+        },
+        {
+          "ml": 50,
+          "price": 255
+        },
+        {
+          "ml": 100,
+          "price": 446
+        }
+      ],
+      "image": "images/art/orient-amber.jpg"
+    },
+    {
+      "id": 30,
+      "slug": "cinnamon-honey",
+      "name": "قرفة وعسل",
+      "family": "شرقية",
+      "color": "#be5627",
+      "top": [
+        "زعفران",
+        "برتقال مر"
+      ],
+      "heart": [
+        "جلد",
+        "تمر"
+      ],
+      "base": [
+        "لبان",
+        "تونكا"
+      ],
+      "longevity": 61,
+      "sillage": 90,
+      "season": "مسائي",
+      "description": "توابل دافئة وحلاوة داكنة بأثر يُذكَر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 101
+        },
+        {
+          "ml": 50,
+          "price": 155
+        },
+        {
+          "ml": 100,
+          "price": 271
+        }
+      ],
+      "image": "images/art/cinnamon-honey.jpg"
+    },
+    {
+      "id": 31,
+      "slug": "date-cardamom",
+      "name": "تمر وهيل",
+      "family": "شرقية",
+      "color": "#df742e",
+      "top": [
+        "هيل",
+        "قرفة"
+      ],
+      "heart": [
+        "عسل",
+        "ورد"
+      ],
+      "base": [
+        "فانيليا",
+        "عنبر"
+      ],
+      "longevity": 68,
+      "sillage": 48,
+      "season": "شتوي",
+      "description": "شرقي غني بتفاصيل كثيرة يتكشّف مع الوقت.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 117
+        },
+        {
+          "ml": 50,
+          "price": 180
+        },
+        {
+          "ml": 100,
+          "price": 315
+        }
+      ],
+      "image": "images/art/date-cardamom.jpg"
+    },
+    {
+      "id": 32,
+      "slug": "evening-incense",
+      "name": "بخور المساء",
+      "family": "شرقية",
+      "color": "#dd682d",
+      "top": [
+        "برتقال مر",
+        "زعفران"
+      ],
+      "heart": [
+        "تمر",
+        "جلد"
+      ],
+      "base": [
+        "تونكا",
+        "لبان"
+      ],
+      "longevity": 83,
+      "sillage": 76,
+      "season": "شتوي",
+      "description": "عنبر ولبان وحلاوة ناعمة لأمسيات الشتاء.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 11
+        },
+        {
+          "ml": 30,
+          "price": 153
+        },
+        {
+          "ml": 50,
+          "price": 235
+        },
+        {
+          "ml": 100,
+          "price": 411
+        }
+      ],
+      "image": "images/art/evening-incense.jpg"
+    },
+    {
+      "id": 33,
+      "slug": "cedar-wood",
+      "name": "خشب الأرز",
+      "family": "خشبية",
+      "color": "#977648",
+      "top": [
+        "صنوبر",
+        "برغموت"
+      ],
+      "heart": [
+        "أرز",
+        "تبغ"
+      ],
+      "base": [
+        "صندل",
+        "خشب الجوز"
+      ],
+      "longevity": 77,
+      "sillage": 82,
+      "season": "شتوي",
+      "description": "أخشاب جافة ونظيفة بحضور هادئ وأنيق.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 75
+        },
+        {
+          "ml": 50,
+          "price": 115
+        },
+        {
+          "ml": 100,
+          "price": 201
+        }
+      ],
+      "image": "images/art/cedar-wood.png"
+    },
+    {
+      "id": 34,
+      "slug": "golden-sandalwood",
+      "name": "صندل ذهبي",
+      "family": "خشبية",
+      "color": "#936e47",
+      "top": [
+        "فلفل",
+        "جنزبيل"
+      ],
+      "heart": [
+        "فيتيفر",
+        "سرو"
+      ],
+      "base": [
+        "باتشولي",
+        "عنبر"
+      ],
+      "longevity": 60,
+      "sillage": 82,
+      "season": "شتوي",
+      "description": "خشب دافئ بلمسة ترابية، طابع رجولي ناعم.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 140
+        },
+        {
+          "ml": 50,
+          "price": 215
+        },
+        {
+          "ml": 100,
+          "price": 376
+        }
+      ],
+      "image": "images/art/golden-sandalwood.png"
+    },
+    {
+      "id": 35,
+      "slug": "pine-forest",
+      "name": "غابة الصنوبر",
+      "family": "خشبية",
+      "color": "#9d7f53",
+      "top": [
+        "برغموت",
+        "صنوبر"
+      ],
+      "heart": [
+        "تبغ",
+        "أرز"
+      ],
+      "base": [
+        "خشب الجوز",
+        "صندل"
+      ],
+      "longevity": 84,
+      "sillage": 78,
+      "season": "شتوي",
+      "description": "خشب دافئ بلمسة ترابية، طابع رجولي ناعم.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 110
+        },
+        {
+          "ml": 50,
+          "price": 170
+        },
+        {
+          "ml": 100,
+          "price": 298
+        }
+      ],
+      "image": "images/art/pine-forest.jpg"
+    },
+    {
+      "id": 36,
+      "slug": "black-patchouli",
+      "name": "باتشولي أسود",
+      "family": "خشبية",
+      "color": "#9e8054",
+      "top": [
+        "جنزبيل",
+        "فلفل"
+      ],
+      "heart": [
+        "سرو",
+        "فيتيفر"
+      ],
+      "base": [
+        "عنبر",
+        "باتشولي"
+      ],
+      "longevity": 65,
+      "sillage": 45,
+      "season": "شتوي",
+      "description": "غابة بعد المطر: أرز وفيتيفر وظلال عنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 11
+        },
+        {
+          "ml": 30,
+          "price": 153
+        },
+        {
+          "ml": 50,
+          "price": 235
+        },
+        {
+          "ml": 100,
+          "price": 411
+        }
+      ],
+      "image": "images/art/black-patchouli.png"
+    },
+    {
+      "id": 37,
+      "slug": "vetiver-noir",
+      "name": "فيتيفر",
+      "family": "خشبية",
+      "color": "#b68460",
+      "top": [
+        "صنوبر",
+        "برغموت"
+      ],
+      "heart": [
+        "أرز",
+        "تبغ"
+      ],
+      "base": [
+        "صندل",
+        "خشب الجوز"
+      ],
+      "longevity": 91,
+      "sillage": 79,
+      "season": "شتوي",
+      "description": "غابة بعد المطر: أرز وفيتيفر وظلال عنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 12
+        },
+        {
+          "ml": 30,
+          "price": 176
+        },
+        {
+          "ml": 50,
+          "price": 270
+        },
+        {
+          "ml": 100,
+          "price": 472
+        }
+      ],
+      "image": "images/art/vetiver-noir.jpg"
+    },
+    {
+      "id": 38,
+      "slug": "root-wood",
+      "name": "جذور الخشب",
+      "family": "خشبية",
+      "color": "#b08e6c",
+      "top": [
+        "فلفل",
+        "جنزبيل"
+      ],
+      "heart": [
+        "فيتيفر",
+        "سرو"
+      ],
+      "base": [
+        "باتشولي",
+        "عنبر"
+      ],
+      "longevity": 84,
+      "sillage": 78,
+      "season": "خريفي",
+      "description": "أخشاب جافة ونظيفة بحضور هادئ وأنيق.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 185
+        },
+        {
+          "ml": 50,
+          "price": 285
+        },
+        {
+          "ml": 100,
+          "price": 499
+        }
+      ],
+      "image": "images/art/root-wood.jpg"
+    },
+    {
+      "id": 39,
+      "slug": "sunset-wood",
+      "name": "خشب الغروب",
+      "family": "خشبية",
+      "color": "#b18d4e",
+      "top": [
+        "برغموت",
+        "صنوبر"
+      ],
+      "heart": [
+        "تبغ",
+        "أرز"
+      ],
+      "base": [
+        "خشب الجوز",
+        "صندل"
+      ],
+      "longevity": 64,
+      "sillage": 88,
+      "season": "طوال العام",
+      "description": "خشب دافئ بلمسة ترابية، طابع رجولي ناعم.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 143
+        },
+        {
+          "ml": 50,
+          "price": 220
+        },
+        {
+          "ml": 100,
+          "price": 385
+        }
+      ],
+      "image": "images/art/sunset-wood.webp"
+    },
+    {
+      "id": 40,
+      "slug": "cedar-tobacco",
+      "name": "أرز وتبغ",
+      "family": "خشبية",
+      "color": "#a7885b",
+      "top": [
+        "جنزبيل",
+        "فلفل"
+      ],
+      "heart": [
+        "سرو",
+        "فيتيفر"
+      ],
+      "base": [
+        "عنبر",
+        "باتشولي"
+      ],
+      "longevity": 65,
+      "sillage": 71,
+      "season": "خريفي",
+      "description": "أخشاب جافة ونظيفة بحضور هادئ وأنيق.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 65
+        },
+        {
+          "ml": 50,
+          "price": 100
+        },
+        {
+          "ml": 100,
+          "price": 175
+        }
+      ],
+      "image": "images/art/cedar-tobacco.png"
+    },
+    {
+      "id": 41,
+      "slug": "walnut-wood",
+      "name": "خشب الجوز",
+      "family": "خشبية",
+      "color": "#b28f6a",
+      "top": [
+        "صنوبر",
+        "برغموت"
+      ],
+      "heart": [
+        "أرز",
+        "تبغ"
+      ],
+      "base": [
+        "صندل",
+        "خشب الجوز"
+      ],
+      "longevity": 56,
+      "sillage": 51,
+      "season": "طوال العام",
+      "description": "أخشاب جافة ونظيفة بحضور هادئ وأنيق.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 6
+        },
+        {
+          "ml": 30,
+          "price": 88
+        },
+        {
+          "ml": 50,
+          "price": 135
+        },
+        {
+          "ml": 100,
+          "price": 236
+        }
+      ],
+      "image": "images/art/walnut-wood.jpg"
+    },
+    {
+      "id": 42,
+      "slug": "cypress-shade",
+      "name": "ظل السرو",
+      "family": "خشبية",
+      "color": "#9b754b",
+      "top": [
+        "فلفل",
+        "جنزبيل"
+      ],
+      "heart": [
+        "فيتيفر",
+        "سرو"
+      ],
+      "base": [
+        "باتشولي",
+        "عنبر"
+      ],
+      "longevity": 86,
+      "sillage": 64,
+      "season": "طوال العام",
+      "description": "غابة بعد المطر: أرز وفيتيفر وظلال عنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 65
+        },
+        {
+          "ml": 50,
+          "price": 100
+        },
+        {
+          "ml": 100,
+          "price": 175
+        }
+      ],
+      "image": "images/art/cypress-shade.jpg"
+    },
+    {
+      "id": 43,
+      "slug": "resin-wood",
+      "name": "خشب الصمغ",
+      "family": "خشبية",
+      "color": "#9d7b3f",
+      "top": [
+        "برغموت",
+        "صنوبر"
+      ],
+      "heart": [
+        "تبغ",
+        "أرز"
+      ],
+      "base": [
+        "خشب الجوز",
+        "صندل"
+      ],
+      "longevity": 62,
+      "sillage": 80,
+      "season": "خريفي",
+      "description": "غابة بعد المطر: أرز وفيتيفر وظلال عنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 143
+        },
+        {
+          "ml": 50,
+          "price": 220
+        },
+        {
+          "ml": 100,
+          "price": 385
+        }
+      ],
+      "image": "images/art/resin-wood.jpg"
+    },
+    {
+      "id": 44,
+      "slug": "old-oak",
+      "name": "بلوط قديم",
+      "family": "خشبية",
+      "color": "#b08262",
+      "top": [
+        "جنزبيل",
+        "فلفل"
+      ],
+      "heart": [
+        "سرو",
+        "فيتيفر"
+      ],
+      "base": [
+        "عنبر",
+        "باتشولي"
+      ],
+      "longevity": 83,
+      "sillage": 90,
+      "season": "طوال العام",
+      "description": "غابة بعد المطر: أرز وفيتيفر وظلال عنبر.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 104
+        },
+        {
+          "ml": 50,
+          "price": 160
+        },
+        {
+          "ml": 100,
+          "price": 280
+        }
+      ],
+      "image": "images/art/old-oak.jpg"
+    },
+    {
+      "id": 45,
+      "slug": "sea-spray",
+      "name": "رذاذ البحر",
+      "family": "مائيّة",
+      "color": "#309dd0",
+      "top": [
+        "ملح البحر",
+        "خيار"
+      ],
+      "heart": [
+        "زنبق الماء",
+        "أعشاب بحرية"
+      ],
+      "base": [
+        "مسك أبيض",
+        "عنبر رمادي"
+      ],
+      "longevity": 77,
+      "sillage": 70,
+      "season": "صيفي",
+      "description": "شفافية منعشة تناسب الصيف والرحلات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 68
+        },
+        {
+          "ml": 50,
+          "price": 105
+        },
+        {
+          "ml": 100,
+          "price": 184
+        }
+      ],
+      "image": "images/art/sea-spray.png"
+    },
+    {
+      "id": 46,
+      "slug": "morning-dew",
+      "name": "ندى الصباح",
+      "family": "مائيّة",
+      "color": "#2d7cd7",
+      "top": [
+        "ليمون",
+        "نعناع"
+      ],
+      "heart": [
+        "أوزون",
+        "لوتس"
+      ],
+      "base": [
+        "خشب طافٍ",
+        "أرز"
+      ],
+      "longevity": 57,
+      "sillage": 69,
+      "season": "ربيعي",
+      "description": "شفافية منعشة تناسب الصيف والرحلات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 98
+        },
+        {
+          "ml": 50,
+          "price": 150
+        },
+        {
+          "ml": 100,
+          "price": 262
+        }
+      ],
+      "image": "images/art/morning-dew.jpg"
+    },
+    {
+      "id": 47,
+      "slug": "blue-wave",
+      "name": "موج أزرق",
+      "family": "مائيّة",
+      "color": "#1e74bb",
+      "top": [
+        "خيار",
+        "ملح البحر"
+      ],
+      "heart": [
+        "أعشاب بحرية",
+        "زنبق الماء"
+      ],
+      "base": [
+        "عنبر رمادي",
+        "مسك أبيض"
+      ],
+      "longevity": 67,
+      "sillage": 72,
+      "season": "ربيعي",
+      "description": "شفافية منعشة تناسب الصيف والرحلات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 11
+        },
+        {
+          "ml": 30,
+          "price": 156
+        },
+        {
+          "ml": 50,
+          "price": 240
+        },
+        {
+          "ml": 100,
+          "price": 420
+        }
+      ],
+      "image": "images/art/blue-wave.png"
+    },
+    {
+      "id": 48,
+      "slug": "salt-sand",
+      "name": "ملح ورمل",
+      "family": "مائيّة",
+      "color": "#2268b6",
+      "top": [
+        "نعناع",
+        "ليمون"
+      ],
+      "heart": [
+        "لوتس",
+        "أوزون"
+      ],
+      "base": [
+        "أرز",
+        "خشب طافٍ"
+      ],
+      "longevity": 58,
+      "sillage": 85,
+      "season": "ربيعي",
+      "description": "نسيم بحر بارد ونظافة مشرقة بلا ثقل.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 12
+        },
+        {
+          "ml": 30,
+          "price": 172
+        },
+        {
+          "ml": 50,
+          "price": 265
+        },
+        {
+          "ml": 100,
+          "price": 464
+        }
+      ],
+      "image": "images/art/salt-sand.jpg"
+    },
+    {
+      "id": 49,
+      "slug": "spring-rain",
+      "name": "مطر الربيع",
+      "family": "مائيّة",
+      "color": "#2da3ba",
+      "top": [
+        "ملح البحر",
+        "خيار"
+      ],
+      "heart": [
+        "زنبق الماء",
+        "أعشاب بحرية"
+      ],
+      "base": [
+        "مسك أبيض",
+        "عنبر رمادي"
+      ],
+      "longevity": 59,
+      "sillage": 65,
+      "season": "طوال العام",
+      "description": "شفافية منعشة تناسب الصيف والرحلات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 10
+        },
+        {
+          "ml": 30,
+          "price": 143
+        },
+        {
+          "ml": 50,
+          "price": 220
+        },
+        {
+          "ml": 100,
+          "price": 385
+        }
+      ],
+      "image": "images/art/spring-rain.png"
+    },
+    {
+      "id": 50,
+      "slug": "springs",
+      "name": "ينابيع",
+      "family": "مائيّة",
+      "color": "#287ac8",
+      "top": [
+        "ليمون",
+        "نعناع"
+      ],
+      "heart": [
+        "أوزون",
+        "لوتس"
+      ],
+      "base": [
+        "خشب طافٍ",
+        "أرز"
+      ],
+      "longevity": 94,
+      "sillage": 73,
+      "season": "صيفي",
+      "description": "شفافية منعشة تناسب الصيف والرحلات.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 6
+        },
+        {
+          "ml": 30,
+          "price": 91
+        },
+        {
+          "ml": 50,
+          "price": 140
+        },
+        {
+          "ml": 100,
+          "price": 245
+        }
+      ],
+      "image": "images/art/springs.jpg"
+    },
+    {
+      "id": 51,
+      "slug": "glacier",
+      "name": "جليد",
+      "family": "مائيّة",
+      "color": "#39b9df",
+      "top": [
+        "خيار",
+        "ملح البحر"
+      ],
+      "heart": [
+        "أعشاب بحرية",
+        "زنبق الماء"
+      ],
+      "base": [
+        "عنبر رمادي",
+        "مسك أبيض"
+      ],
+      "longevity": 87,
+      "sillage": 58,
+      "season": "صيفي",
+      "description": "رذاذ ملحي وزهور مائية، هدوء وانتعاش.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 8
+        },
+        {
+          "ml": 30,
+          "price": 114
+        },
+        {
+          "ml": 50,
+          "price": 175
+        },
+        {
+          "ml": 100,
+          "price": 306
+        }
+      ],
+      "image": "images/art/glacier.png"
+    },
+    {
+      "id": 52,
+      "slug": "pearl",
+      "name": "لؤلؤ",
+      "family": "مائيّة",
+      "color": "#2da8c7",
+      "top": [
+        "نعناع",
+        "ليمون"
+      ],
+      "heart": [
+        "لوتس",
+        "أوزون"
+      ],
+      "base": [
+        "أرز",
+        "خشب طافٍ"
+      ],
+      "longevity": 95,
+      "sillage": 49,
+      "season": "ربيعي",
+      "description": "رذاذ ملحي وزهور مائية، هدوء وانتعاش.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 9
+        },
+        {
+          "ml": 30,
+          "price": 133
+        },
+        {
+          "ml": 50,
+          "price": 205
+        },
+        {
+          "ml": 100,
+          "price": 359
+        }
+      ],
+      "image": "images/art/pearl.jpg"
+    },
+    {
+      "id": 53,
+      "slug": "sunset-shore",
+      "name": "شاطئ الغروب",
+      "family": "مائيّة",
+      "color": "#4892d5",
+      "top": [
+        "ملح البحر",
+        "خيار"
+      ],
+      "heart": [
+        "زنبق الماء",
+        "أعشاب بحرية"
+      ],
+      "base": [
+        "مسك أبيض",
+        "عنبر رمادي"
+      ],
+      "longevity": 74,
+      "sillage": 50,
+      "season": "طوال العام",
+      "description": "رذاذ ملحي وزهور مائية، هدوء وانتعاش.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 5
+        },
+        {
+          "ml": 30,
+          "price": 62
+        },
+        {
+          "ml": 50,
+          "price": 95
+        },
+        {
+          "ml": 100,
+          "price": 166
+        }
+      ],
+      "image": "images/art/sunset-shore.jpg"
+    },
+    {
+      "id": 54,
+      "slug": "lake",
+      "name": "بحيرة",
+      "family": "مائيّة",
+      "color": "#3c9ee0",
+      "top": [
+        "ليمون",
+        "نعناع"
+      ],
+      "heart": [
+        "أوزون",
+        "لوتس"
+      ],
+      "base": [
+        "خشب طافٍ",
+        "أرز"
+      ],
+      "longevity": 84,
+      "sillage": 63,
+      "season": "ربيعي",
+      "description": "نسيم بحر بارد ونظافة مشرقة بلا ثقل.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 182
+        },
+        {
+          "ml": 50,
+          "price": 280
+        },
+        {
+          "ml": 100,
+          "price": 490
+        }
+      ],
+      "image": "images/art/lake.jpg"
+    },
+    {
+      "id": 55,
+      "slug": "harbor-breeze",
+      "name": "نسيم المرفأ",
+      "family": "مائيّة",
+      "color": "#2a90b3",
+      "top": [
+        "خيار",
+        "ملح البحر"
+      ],
+      "heart": [
+        "أعشاب بحرية",
+        "زنبق الماء"
+      ],
+      "base": [
+        "عنبر رمادي",
+        "مسك أبيض"
+      ],
+      "longevity": 82,
+      "sillage": 63,
+      "season": "طوال العام",
+      "description": "رذاذ ملحي وزهور مائية، هدوء وانتعاش.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 7
+        },
+        {
+          "ml": 30,
+          "price": 94
+        },
+        {
+          "ml": 50,
+          "price": 145
+        },
+        {
+          "ml": 100,
+          "price": 254
+        }
+      ],
+      "image": "images/art/harbor-breeze.jpg"
+    },
+    {
+      "id": 56,
+      "slug": "cloud-mist",
+      "name": "غيمة",
+      "family": "مائيّة",
+      "color": "#38c3da",
+      "top": [
+        "نعناع",
+        "ليمون"
+      ],
+      "heart": [
+        "لوتس",
+        "أوزون"
+      ],
+      "base": [
+        "أرز",
+        "خشب طافٍ"
+      ],
+      "longevity": 78,
+      "sillage": 69,
+      "season": "طوال العام",
+      "description": "رذاذ ملحي وزهور مائية، هدوء وانتعاش.",
+      "sizes": [
+        {
+          "ml": 2,
+          "price": 13
+        },
+        {
+          "ml": 30,
+          "price": 188
+        },
+        {
+          "ml": 50,
+          "price": 290
+        },
+        {
+          "ml": 100,
+          "price": 508
+        }
+      ],
+      "image": "images/art/cloud-mist.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "مستخدم تجريبي",
+      "email": "demo@aurelle.com",
+      "password": "123456",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "name": "ريم",
+      "email": "reem@gmail.com",
+      "password": "123456",
+      "createdAt": "2026-11-05T19:39:40.960Z",
+      "id": 2
+    },
+    {
+      "name": "محمد",
+      "email": "moha@gmail.com",
+      "password": "123456",
+      "createdAt": "2026-11-05T19:44:31.139Z",
+      "id": 3
+    }
+  ],
+  "favorites": [
+    {
+      "userId": 1,
+      "perfumeId": 3,
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "perfumeId": 2,
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "perfumeId": 1,
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "perfumeId": 3,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "perfumeId": 21,
+      "id": 6
+    }
+  ],
+  "orders": [
+    {
+      "userId": 1,
+      "createdAt": "2026-11-04T21:02:12.596Z",
+      "status": "قيد المعالجة",
+      "address": "طبربور شارع اردبيل",
+      "items": [
+        {
+          "perfumeId": 3,
+          "name": "فجر الليمون",
+          "ml": 50,
+          "qty": 1,
+          "price": 130
+        },
+        {
+          "perfumeId": 14,
+          "name": "ورد المساء",
+          "ml": 2,
+          "qty": 1,
+          "price": 8
+        }
+      ],
+      "total": 138,
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "createdAt": "2026-11-05T19:45:53.305Z",
+      "status": "قيد المعالجة",
+      "address": "طبربور",
+      "items": [
+        {
+          "perfumeId": 2,
+          "name": "عود الليل",
+          "ml": 2,
+          "qty": 2,
+          "price": 10
+        },
+        {
+          "perfumeId": 2,
+          "name": "عود الليل",
+          "ml": 30,
+          "qty": 1,
+          "price": 150
+        }
+      ],
+      "total": 170,
+      "id": 2
+    }
+  ]
+}

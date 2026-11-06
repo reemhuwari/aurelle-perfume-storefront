@@ -1,0 +1,40 @@
+.pill{border:1px solid var(--line);border-radius:99px;padding:6px 18px;font-size:14px;transition:.3s;&:hover{background:var(--pearl);color:var(--ink)}&.fill{background:var(--petal);color:var(--ink);border-color:var(--petal)}}
+.badge{background:var(--brass);color:var(--ink);border-radius:50%;width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;margin-inline-start:6px}
+.cta{display:inline-flex;gap:10px;background:var(--pearl);color:var(--ink);padding:13px 32px;border-radius:99px;font-weight:500;transition:.3s;
+  &:hover{background:var(--petal);transform:translateY(-2px)}&:disabled{opacity:.5}&.ghost{background:none;color:var(--pearl);border:1px solid var(--line)}}
+.chips,.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0}
+.chip{border:1px solid var(--line);border-radius:99px;padding:5px 18px;font-size:14px;transition:.3s;&.on,&:hover{background:var(--pearl);color:var(--ink)}}
+.empty-state{grid-column:1/-1;text-align:center;padding:48px 24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);
+  .sub{margin:0 auto 22px}}
+.card{display:block;position:relative;h3{font-size:24px;margin-top:12px}.m{display:flex;justify-content:space-between;font-size:14px;opacity:.7}
+  &:hover .shelf{transform:translateY(-6px)}&:hover .bt{transform:translateY(-10px) rotate(-3deg)}}
+.shelf{aspect-ratio:4/5;border-radius:18px;display:grid;place-items:end center;padding-bottom:12%;position:relative;overflow:hidden;transition:.5s;
+  &::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(255,255,255,.14),transparent 60%)}}
+.bt{position:relative;width:34%;aspect-ratio:3/5;border-radius:10px 10px 14px 14px;background:linear-gradient(100deg,rgba(255,255,255,.35),rgba(255,255,255,.05) 40%,rgba(255,255,255,.25));border:1px solid rgba(255,255,255,.35);transition:.5s;z-index:1;
+  &::before{content:"";position:absolute;inset:6px;border-radius:6px;background:var(--c)}
+  &::after{content:"";position:absolute;top:-16%;left:30%;width:40%;height:16%;background:linear-gradient(90deg,#8a6a38,var(--brass),#8a6a38);border-radius:3px}}
+.heart{position:absolute;top:12px;left:12px;z-index:3;width:38px;height:38px;border-radius:50%;background:rgba(18,6,10,.5);border:1px solid var(--line);font-size:18px;opacity:.8;&.on{color:#ff6b8f;opacity:1}}
+.pyr{margin:22px 0;display:grid;gap:10px;div{display:grid;grid-template-columns:70px 1fr;gap:12px;border-top:1px solid var(--line);padding-top:8px}b{color:var(--brass);font-weight:500}}
+.bar{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:center;font-size:14px;margin-bottom:6px;
+  i{display:block;height:4px;border-radius:4px;background:var(--line);position:relative;&::after{content:"";position:absolute;inset:0 0 0 auto;width:var(--w);background:var(--petal);border-radius:4px}}}
+.sz{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap;button{border:1px solid var(--line);border-radius:12px;padding:8px 18px;&.on{border-color:var(--petal);background:rgba(234,166,184,.15)}}}
+.crumb{opacity:.6;font-size:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:16px 0;flex-wrap:wrap}
+.order{border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:16px;background:var(--oxblood);.row:last-child{border:0}}
+.total{display:flex;justify-content:space-between;font-size:22px;padding:20px 0}
+.status{color:var(--brass);font-size:14px}
+.err{color:#ff9aa8;font-size:14px;min-height:22px;margin-top:8px}
+.sw{margin-top:16px;font-size:14px;opacity:.8;a{color:var(--petal)}}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--pearl);color:var(--ink);padding:12px 26px;border-radius:99px;z-index:200}
+
+.shelf .art{width:54%;aspect-ratio:3/5;transition:.6s cubic-bezier(.2,.8,.2,1);z-index:1;filter:drop-shadow(0 18px 22px rgba(0,0,0,.45))}
+.card:hover .shelf .art{transform:translateY(-10px) rotate(-3deg) scale(1.03)}
+.shelf img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:11% 14% 7%;filter:drop-shadow(0 18px 22px rgba(0,0,0,.4));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .shelf img{transform:translateY(-8px) rotate(-2deg) scale(1.03)}
+
+/* صور العطور الحقيقية: خلفية ضبابية من الصورة نفسها + الصورة كاملة بدون قص */
+.shelf .photo-bg,.d-photo .photo-bg{padding:0;position:absolute;inset:-12%;width:124%;height:124%;object-fit:cover;filter:blur(30px) saturate(1.08) brightness(.9);z-index:0}
+.shelf img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:0;filter:none;z-index:1;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .shelf img.photo{transform:scale(1.04)}
+.d-photo{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line)}
+.d-photo img.photo{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain}

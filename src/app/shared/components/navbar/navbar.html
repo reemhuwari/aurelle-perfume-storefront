@@ -1,0 +1,23 @@
+<nav [class.hide]="hidden()" [class.solid]="solid()">
+  <a class="logo" routerLink="/" (click)="open.set(false)">أوريل<small>Aurelle</small></a>
+  <div class="links">
+    <a routerLink="/perfumes" routerLinkActive="act">العطور</a>
+    <a routerLink="/account/favorites" routerLinkActive="act">المفضلة ({{ favs.ids().length }})</a>
+  </div>
+  <div class="acts">
+    @if (auth.user(); as u) {
+      <a class="pill hide-sm" routerLink="/account/orders">حسابي · {{ u.name }}</a>
+    } @else {
+      <a class="pill hide-sm" routerLink="/login">دخول</a>
+    }
+    <a class="pill fill" routerLink="/cart">السلة<span class="badge">{{ cart.count() }}</span></a>
+    <button class="burger" [class.on]="open()" [attr.aria-expanded]="open()" aria-label="القائمة" (click)="open.set(!open())"><i></i><i></i></button>
+  </div>
+</nav>
+@if (open()) {
+  <div class="mobile-menu" (click)="open.set(false)">
+    <a routerLink="/perfumes">العطور</a>
+    <a routerLink="/account/favorites">المفضلة</a>
+    @if (auth.user()) { <a routerLink="/account/orders">حسابي</a> } @else { <a routerLink="/login">دخول</a> }
+  </div>
+}

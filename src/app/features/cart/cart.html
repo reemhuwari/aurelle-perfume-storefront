@@ -1,0 +1,23 @@
+<section class="page">
+  <h1>السلة</h1>
+  @if (!cart.detailed().length) {
+    <p class="sub">سلتك فارغة.</p>
+    <a class="cta" routerLink="/perfumes">تصفح العطور</a>
+  } @else {
+    @for (l of cart.detailed(); track l.i) {
+      <div class="row">
+        <a [routerLink]="['/perfumes', l.p.slug]">{{ l.p.name }} · {{ l.ml }} مل</a>
+        <span>
+          <button class="chip" (click)="cart.setQty(l.i, l.qty - 1)">−</button> {{ l.qty }}
+          <button class="chip" (click)="cart.setQty(l.i, l.qty + 1)">+</button>
+        </span>
+        <b>{{ l.price * l.qty }} د.أ</b>
+        <button (click)="cart.remove(l.i)" aria-label="حذف">×</button>
+      </div>
+    }
+    <div class="total"><span>المجموع</span><b>{{ cart.total() }} د.أ</b></div>
+    <textarea rows="3" [(ngModel)]="address" placeholder="عنوان التوصيل (المدينة، الحي، الشارع، رقم الهاتف)"></textarea>
+    <div class="err">{{ error() }}</div>
+    <button class="cta" (click)="checkout()" [disabled]="busy()">إتمام الطلب</button>
+  }
+</section>

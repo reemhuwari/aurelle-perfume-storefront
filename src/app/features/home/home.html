@@ -1,0 +1,77 @@
+<!-- قصة الزجاجة: .story طويل، و .stage لاصق (sticky) يبقى على الشاشة أثناء تغيّر النصوص -->
+<section class="story" aria-label="رحلة العطر">
+  <div class="stage">
+    <div class="floral-backdrop" aria-hidden="true">
+      <img class="floral-photo roses-main" src="images/hero/hero-white-pink-roses.jpg" alt="" fetchpriority="high">
+      <img class="floral-photo roses-mauve" src="images/hero/hero-mauve-white-roses.jpg" alt="">
+      <img class="floral-photo rose-closeup" src="images/hero/hero-pink-rose-closeup.jpg" alt="">
+      <!-- Photo by Kiriakos Verros on Unsplash, credit supplied by the site owner. -->
+      <img class="floral-photo cherry-blossoms" src="images/hero/hero-cherry-blossoms.jpg" alt="">
+    </div>
+    <div class="floral-shade" aria-hidden="true"></div>
+
+    <div class="slot slot-hero">
+      <div class="hero-copy">
+        <span class="eyebrow" appReveal>مجموعة 2026 · نيش · دفعات محدودة</span>
+        <h1 appSplitText>عطرٌ يتفتّح<br>كوردة ملكية</h1>
+        <p appReveal [delay]="0.5">تشكيلة نيش بدفعات صغيرة، بزيوت عطرية مركّزة تدوم من الصباح حتى منتصف الليل.</p>
+        <div class="hero-cta" appReveal [delay]="0.7">
+          <a class="cta" appMagnetic routerLink="/perfumes">اكتشف العطور</a>
+          <button class="cta ghost" type="button" appMagnetic (click)="hb().spray(0)">✦ جرّب الرشّة</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- الزجاجة: wrap (التمرير) > float (الطفو) > in (الدخول) — كل طبقة تحرّك خاصية مختلفة لتجنّب التعارض -->
+    <div class="bottle-wrap">
+      <div class="bottle-float">
+        <div class="bottle-in">
+          <app-hero-bottle class="hero-svg" />
+        </div>
+      </div>
+      <div class="bottle-shadow" aria-hidden="true"><i></i></div>
+    </div>
+
+    @for (c of chapters; track c.n; let i = $index) {
+      <div class="slot slot-ch" [class.alt]="i % 2 === 1">
+        <article class="ch"><b>{{ c.n }}</b><h2>{{ c.t }}</h2><p>{{ c.d }}</p></article>
+      </div>
+    }
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <div class="scroll-hint" aria-hidden="true"><i></i>مرّر</div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    @for (k of [0, 1]; track k) { <span>@for (n of notes; track n) { {{ n }} ✦ }</span> }
+  </div>
+</div>
+
+<section class="block">
+  <div class="sec-head" appReveal>
+    <div><span class="eyebrow">اختيارات الموسم</span><h2>عطور تُشمّ قبل أن تُرى</h2></div>
+    <a class="link" routerLink="/perfumes">كل العطور ←</a>
+  </div>
+  <div class="grid" appReveal revealItems=".card">
+    @for (p of top(); track p.id) { <app-perfume-card [p]="p" /> }
+  </div>
+</section>
+
+<section class="block">
+  <h2 appReveal>ابدأ من العائلة التي تشبهك</h2>
+  <div class="fam" appReveal revealItems=".fam-card">
+    @for (f of famCards(); track f.name) {
+      <a class="fam-card" appSpotlight [style.--c]="f.color" [style.--family-image]="f.image" routerLink="/perfumes" [queryParams]="{ family: f.slug }">
+        <span>{{ f.count }} {{ f.count === 1 ? 'عطر' : 'عطور' }}</span>
+        <h3>{{ f.name }}</h3>
+      </a>
+    }
+  </div>
+</section>
+
+<section class="block cta-band" appReveal>
+  <h2>جرّب قبل أن تقرّر</h2>
+  <p class="sub">عيّنة 2 مل من أي عطر في المجموعة، لتعرف أثره على بشرتك.</p>
+  <a class="cta" appMagnetic routerLink="/perfumes">اختر عيّنتك</a>
+</section>

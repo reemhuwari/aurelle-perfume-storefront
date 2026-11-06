@@ -1,0 +1,38 @@
+@if (p(); as x) {
+  <section class="page detail">
+    @if (isPhoto(x.image)) {
+      <div class="d3 d-photo">
+        <img class="photo-bg" [src]="x.image" alt="" aria-hidden="true" />
+        <img class="photo" [src]="x.image" [alt]="x.name" />
+      </div>
+    } @else {
+      <div class="d3"><app-bottle [color]="x.color" /></div>
+    }
+    <div>
+      <a class="crumb" routerLink="/perfumes">← كل العطور</a>
+      <p class="sub">{{ x.family }} · {{ x.season }}</p>
+      <h1>{{ x.name }}</h1>
+      <p class="sub">{{ x.description }}</p>
+      <div class="pyr">
+        <div><b>القمّة</b><span>{{ x.top.join('، ') }}</span></div>
+        <div><b>القلب</b><span>{{ x.heart.join('، ') }}</span></div>
+        <div><b>القاعدة</b><span>{{ x.base.join('، ') }}</span></div>
+      </div>
+      <div class="bar"><span>الثبات</span><i [style.--w]="x.longevity + '%'"></i></div>
+      <div class="bar"><span>الفوحان</span><i [style.--w]="x.sillage + '%'"></i></div>
+      <div class="sz">
+        @for (s of x.sizes; track s.ml) {
+          <button [class.on]="size()?.ml === s.ml" (click)="ml.set(s.ml)">{{ s.ml }} مل · {{ s.price }} د.أ</button>
+        }
+      </div>
+      <button class="cta" (click)="add()">أضف للسلة</button>
+      <button class="cta ghost" (click)="fav()">{{ favs.has(x.id) ? '♥ في المفضلة' : '♡ أضف للمفضلة' }}</button>
+    </div>
+  </section>
+  <section class="block">
+    <h2>عطور من عائلة {{ x.family }}</h2>
+    <div class="grid">@for (r of related(); track r.id) { <app-perfume-card [p]="r" /> }</div>
+  </section>
+} @else {
+  <section class="page"><h1>لم نجد هذا العطر</h1><a class="cta" routerLink="/perfumes">تصفح كل العطور</a></section>
+}

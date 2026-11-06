@@ -1,0 +1,3 @@
+<div class="grid">
+  @for (p of list(); track p.id) { <app-perfume-card [p]="p" /> } @empty { <p class="sub">لم تضف أي عطر للمفضلة بعد.</p> }
+</div>

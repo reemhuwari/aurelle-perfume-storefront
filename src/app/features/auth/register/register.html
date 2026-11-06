@@ -1,0 +1,20 @@
+<section class="page auth-page">
+  <form class="authbox" (ngSubmit)="submit()">
+    <div class="auth-header">
+      <h1>أنشئ حسابك</h1>
+      <p class="sub">احفظ عطورك المفضلة وتابع طلباتك.</p>
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" name="name" [(ngModel)]="name" placeholder="الاسم" autocomplete="name" />
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" name="email" type="email" [(ngModel)]="email" placeholder="البريد الإلكتروني" autocomplete="email" />
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" name="password" type="password" [(ngModel)]="password" placeholder="كلمة المرور (6 أحرف على الأقل)" autocomplete="new-password" />
+    </div>
+    <div class="err">{{ error() }}</div>
+    <button class="cta" type="submit" [disabled]="busy()">إنشاء الحساب</button>
+    <p class="sw">لديك حساب؟ <a routerLink="/login" [queryParams]="{ returnUrl: returnUrl() }">سجّل دخولك</a></p>
+  </form>
+</section>

@@ -1,0 +1,10 @@
+<section class="page">
+  <h1>أهلاً {{ auth.user()?.name }}</h1>
+  <p class="sub">{{ auth.user()?.email }}</p>
+  <div class="tabs">
+    <a class="chip" routerLink="orders" routerLinkActive="on">طلباتي</a>
+    <a class="chip" routerLink="favorites" routerLinkActive="on">المفضلة</a>
+    <button class="chip" (click)="auth.logout()">تسجيل الخروج</button>
+  </div>
+  <router-outlet />
+</section>

@@ -1,0 +1,11 @@
+@for (o of orders(); track o.id) {
+  <div class="order">
+    <div class="row"><b>طلب #{{ o.id }}</b><span class="status">{{ o.status }}</span><span>{{ o.createdAt | date: 'yyyy/MM/dd' }}</span></div>
+    @for (i of o.items; track $index) {
+      <div class="row"><span>{{ i.name }} · {{ i.ml }} مل × {{ i.qty }}</span><span>{{ i.price * i.qty }} د.أ</span></div>
+    }
+    <div class="row"><span class="sub">{{ o.address }}</span><b>{{ o.total }} د.أ</b></div>
+  </div>
+} @empty {
+  @if (!loading()) { <p class="sub">لا توجد طلبات بعد.</p><a class="cta" routerLink="/perfumes">ابدأ التسوّق</a> }
+}
