@@ -8,7 +8,8 @@
     "api": "json-server --watch db.json --port 3000",
     "dev": "concurrently -k \"npm:api\" \"npm:start\"",
     "build": "ng build",
-    "glb": "python tools/make_glb.py"
+    "glb": "python tools/make_glb.py",
+    "remove:bottle-background": "node tools/remove-bottle-background.mjs"
   },
   "dependencies": {
     "@angular/common": "^20.0.0",
@@ -31,6 +32,7 @@
     "@types/three": "^0.170.0",
     "concurrently": "^9.0.0",
     "json-server": "0.17.4",
+    "sharp": "^0.35.5",
     "typescript": "~5.8.2"
   }
 }

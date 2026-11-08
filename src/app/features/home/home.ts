@@ -3,7 +3,8 @@ import { RouterLink } from '@angular/router';
 import { gsap } from 'gsap';
 import { PerfumeService } from '../../core/services/perfume.service';
 import { MotionService } from '../../core/services/motion.service';
-import { HeroBottle } from '../../shared/components/hero-bottle/hero-bottle';
+import { BottleStoryPose, HeroBottleDisplay } from '../../shared/components/hero-bottle-display/hero-bottle-display';
+import { MistCanvas, SCENT_NOTES, ScentKind } from '../../shared/components/mist-canvas/mist-canvas';
 import { PerfumeCard } from '../../shared/components/perfume-card/perfume-card';
 import { Reveal } from '../../shared/directives/reveal.directive';
 import { SplitText } from '../../shared/directives/split-text.directive';
@@ -12,7 +13,7 @@ import { Spotlight } from '../../shared/directives/spotlight.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, HeroBottle, PerfumeCard, Reveal, SplitText, Magnetic, Spotlight],
+  imports: [RouterLink, HeroBottleDisplay, MistCanvas, PerfumeCard, Reveal, SplitText, Magnetic, Spotlight],
   templateUrl: './home.html'
 })
 export class Home implements AfterViewInit, OnDestroy {
@@ -24,7 +25,8 @@ export class Home implements AfterViewInit, OnDestroy {
   private scroll?: ReturnType<typeof gsap.matchMedia>;
   private autoSpray?: ReturnType<typeof gsap.delayedCall>;
   private lastIdx = -1;
-  hb = viewChild.required(HeroBottle);
+  hb = viewChild.required(HeroBottleDisplay);
+  scentNotes = SCENT_NOTES;
 
   private familyImageMap: Record<string, string> = {
     floral: 'url("images/art/rose-royale.webp")',
@@ -53,8 +55,20 @@ export class Home implements AfterViewInit, OnDestroy {
   ];
 
   ngAfterViewInit() {
-    if (this.motion.reduced) return;                 // تجربة ثابتة بدون حركة (التنسيق في _motion.scss)
-    this.zone.runOutsideAngular(() => { this.playIntro(); this.buildScrollStory(); });
+    if (this.motion.reduced) return;
+    this.zone.runOutsideAngular(() => { void this.initializeMotion(); });
+  }
+
+  private async initializeMotion() {
+    try {
+      await this.hb().ready;
+      if (this.host.isConnected) {
+        this.playIntro();
+        this.buildScrollStory();
+      }
+    } catch (error) {
+      console.error('Unable to initialize the hero motion.', error);
+    }
   }
 
   /** 1) دخول الزجاجة عند تحميل الصفحة + حركة طفو خفيفة */
@@ -75,28 +89,36 @@ export class Home implements AfterViewInit, OnDestroy {
     const story = this.host.querySelector('.story');
     if (!story) return;
     this.scroll = gsap.matchMedia(this.host);
-    this.scroll.add({ desk: '(min-width: 861px)', mob: '(max-width: 860px)' }, ctx => {
+    this.scroll.add({ desk: '(min-width: 641px)', mob: '(max-width: 640px)' }, ctx => {
       const desk = !!ctx.conditions?.['desk'];
       const wrap = q('.bottle-wrap'), chs = q('.ch');
-      const shift = desk ? '2vw' : '0vw';
+      const sceneBottle = this.hb().isThreeDimensional;
+      const pose: BottleStoryPose = { x: 0, y: 0, scale: 1, rotation: 0 };
+      const shift = sceneBottle ? (desk ? window.innerWidth * 0.02 : 0) : desk ? '2vw' : '0vw';
+      const bottleTarget = sceneBottle ? pose : wrap;
 
       // وضعية البداية (الهيرو): الزجاجة على جانب الصفحة، وعلى الجوال تبقى بالمنتصف أعلى النص
-      gsap.set(wrap, { x: desk ? '-24vw' : 0, y: 0, scale: 1, rotation: -4 });
+      gsap.set(bottleTarget, { x: sceneBottle && desk ? -window.innerWidth * 0.24 : desk ? '-24vw' : 0, y: 0, scale: 1, rotation: 0 });
+      if (sceneBottle) this.hb().setStoryTransform(pose);
 
       const tl = gsap.timeline({
         defaults: { ease: 'none' },
+        onUpdate: () => { if (sceneBottle) this.hb().setStoryTransform(pose); },
         scrollTrigger: {
           trigger: story, start: 'top top', end: 'bottom bottom', scrub: 0.8,
           // رشّة عند دخول كل فصل (القمّة ثم القلب ثم القاعدة)، للأسفل فقط
           onUpdate: self => {
             const p = self.progress, idx = p < 0.22 ? -1 : p < 0.42 ? 0 : p < 0.62 ? 1 : 2;
-            if (self.direction === 1 && idx > this.lastIdx && idx >= 0) this.hb().spray(idx + 1);
+            if (self.direction === 1 && idx > this.lastIdx && idx >= 0) {
+              const kind: ScentKind = idx === 0 ? 1 : idx === 1 ? 2 : 3;
+              this.hb().spray(kind);
+            }
             this.lastIdx = idx;
           }
         }
       });
       // 0 → 2 : من الهيرو إلى الفصل الأول
-      tl.to(wrap, { x: `-${shift}`, scale: 1.08, rotation: 0, duration: 2, ease: 'power1.inOut' }, 0)
+      tl.to(bottleTarget, { x: sceneBottle ? -shift : `-${shift}`, scale: 1.08, rotation: 0, duration: 2, ease: 'power1.inOut' }, 0)
         .to(q('.hero-copy'), { autoAlpha: 0, y: -50, duration: 1.1 }, 0.2)
         .to(q('.scroll-hint'), { opacity: 0, duration: 0.5 }, 0);
       // 2 → 8 : ثلاثة فصول، لكل فصل نص يدخل ويخرج وزجاجة تتحرك حركة بسيطة
@@ -105,11 +127,18 @@ export class Home implements AfterViewInit, OnDestroy {
         tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, s + 0.1)
           .to(el, { opacity: 0, y: -40, duration: 0.6, ease: 'power2.in' }, s + 1.5);
       });
-      tl.to(wrap, { x: shift, scale: 1.12, rotation: 2, duration: 2, ease: 'power1.inOut' }, 2)
-        .to(wrap, { x: `-${shift}`, scale: 1.1, rotation: -2, duration: 2, ease: 'power1.inOut' }, 4)
-        .to(wrap, { x: shift, scale: 1.16, rotation: 1, duration: 2, ease: 'power1.inOut' }, 6)
+      tl.to(bottleTarget, { x: shift, scale: 1.12, rotation: 1.2, duration: 2, ease: 'power1.inOut' }, 2)
+        .to(bottleTarget, { x: sceneBottle ? -shift : `-${shift}`, scale: 1.1, rotation: -1.2, duration: 2, ease: 'power1.inOut' }, 4)
+        .to(bottleTarget, { x: shift, scale: 1.16, rotation: 0.8, duration: 2, ease: 'power1.inOut' }, 6)
         // 8 → 10 : تحرير الزجاجة قبل نهاية المقطع اللاصق
-        .to(wrap, { x: 0, y: desk ? '-4vh' : '-3vh', scale: 1, rotation: 0, duration: 2, ease: 'power1.inOut' }, 8);
+        .to(bottleTarget, {
+          x: 0,
+          y: sceneBottle ? -(window.innerHeight * (desk ? 0.04 : 0.03)) : desk ? '-4vh' : '-3vh',
+          scale: 1,
+          rotation: 0,
+          duration: 2,
+          ease: 'power1.inOut'
+        }, 8);
       tl.to(q('.progress i'), { scaleY: 1, duration: 10 }, 0);
     });
   }

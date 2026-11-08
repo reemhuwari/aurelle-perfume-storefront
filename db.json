@@ -2370,6 +2370,20 @@
       "password": "123456",
       "createdAt": "2026-11-05T19:44:31.139Z",
       "id": 3
+    },
+    {
+      "name": "mohammad",
+      "email": "moh@gmail.com",
+      "password": "123456",
+      "createdAt": "2026-11-08T08:39:13.768Z",
+      "id": 4
+    },
+    {
+      "name": "ريم هواري",
+      "email": "reemh@gmail.com",
+      "password": "123456",
+      "createdAt": "2026-11-08T08:42:53.871Z",
+      "id": 5
     }
   ],
   "favorites": [
@@ -2397,6 +2411,21 @@
       "userId": 3,
       "perfumeId": 21,
       "id": 6
+    },
+    {
+      "userId": 4,
+      "perfumeId": 43,
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "perfumeId": 43,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "perfumeId": 53,
+      "id": 9
     }
   ],
   "orders": [
@@ -2447,6 +2476,40 @@
       ],
       "total": 170,
       "id": 2
+    },
+    {
+      "userId": 5,
+      "createdAt": "2026-11-08T08:43:34.870Z",
+      "status": "قيد المعالجة",
+      "address": "طبربور",
+      "items": [
+        {
+          "perfumeId": 43,
+          "name": "خشب الصمغ",
+          "ml": 30,
+          "qty": 2,
+          "price": 143
+        }
+      ],
+      "total": 286,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "createdAt": "2026-11-08T08:45:00.967Z",
+      "status": "قيد المعالجة",
+      "address": "طبربور",
+      "items": [
+        {
+          "perfumeId": 53,
+          "name": "شاطئ الغروب",
+          "ml": 100,
+          "qty": 2,
+          "price": 166
+        }
+      ],
+      "total": 332,
+      "id": 4
     }
   ]
 }

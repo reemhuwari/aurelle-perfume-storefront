@@ -2,19 +2,24 @@
 <section class="story" aria-label="رحلة العطر">
   <div class="stage">
     <div class="floral-backdrop" aria-hidden="true">
-      <img class="floral-photo roses-main" src="images/hero/hero-white-pink-roses.jpg" alt="" fetchpriority="high">
-      <img class="floral-photo roses-mauve" src="images/hero/hero-mauve-white-roses.jpg" alt="">
-      <img class="floral-photo rose-closeup" src="images/hero/hero-pink-rose-closeup.jpg" alt="">
-      <!-- Photo by Kiriakos Verros on Unsplash, credit supplied by the site owner. -->
-      <img class="floral-photo cherry-blossoms" src="images/hero/hero-cherry-blossoms.jpg" alt="">
+      <img class="floral-photo" src="images/hero/hero-background.webp" alt="" width="1400" height="2100" fetchpriority="high">
     </div>
     <div class="floral-shade" aria-hidden="true"></div>
+    <app-mist-canvas #mistCanvas />
 
     <div class="slot slot-hero">
       <div class="hero-copy">
         <span class="eyebrow" appReveal>مجموعة 2026 · نيش · دفعات محدودة</span>
         <h1 appSplitText>عطرٌ يتفتّح<br>كوردة ملكية</h1>
         <p appReveal [delay]="0.5">تشكيلة نيش بدفعات صغيرة، بزيوت عطرية مركّزة تدوم من الصباح حتى منتصف الليل.</p>
+        <div class="scent-notes" aria-label="مكوّنات العطر">
+          @for (note of scentNotes; track note.label) {
+            <div class="scent-note">
+              <span>{{ note.label }}</span>
+              <strong>{{ note.text }}</strong>
+            </div>
+          }
+        </div>
         <div class="hero-cta" appReveal [delay]="0.7">
           <a class="cta" appMagnetic routerLink="/perfumes">اكتشف العطور</a>
           <button class="cta ghost" type="button" appMagnetic (click)="hb().spray(0)">✦ جرّب الرشّة</button>
@@ -26,7 +31,7 @@
     <div class="bottle-wrap">
       <div class="bottle-float">
         <div class="bottle-in">
-          <app-hero-bottle class="hero-svg" />
+          <app-hero-bottle-display class="hero-svg" [mistCanvas]="mistCanvas" />
         </div>
       </div>
       <div class="bottle-shadow" aria-hidden="true"><i></i></div>
